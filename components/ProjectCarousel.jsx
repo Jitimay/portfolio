@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 
 export default function ProjectCarousel({ projects }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Auto-play functionality
   useEffect(() => {
@@ -82,7 +85,13 @@ export default function ProjectCarousel({ projects }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <ProjectCard project={project} />
+                <ProjectCard 
+                  project={project} 
+                  onClick={(project) => {
+                    setSelectedProject(project);
+                    setIsModalOpen(true);
+                  }}
+                />
               </motion.div>
             ))}
           </motion.div>
@@ -136,6 +145,16 @@ export default function ProjectCarousel({ projects }) {
           {isAutoPlaying ? '⏸️ Auto-playing' : '▶️ Play'}
         </button>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedProject(null);
+        }}
+      />
     </div>
   );
 }
