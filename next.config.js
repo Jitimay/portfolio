@@ -5,6 +5,9 @@ const nextConfig = {
     domains: ['via.placeholder.com'],
     unoptimized: true
   },
+  output: 'export',
+  trailingSlash: true,
+  distDir: 'out'
 }
 
 module.exports = nextConfig
