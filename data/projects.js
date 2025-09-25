@@ -23,7 +23,7 @@ export const projects = [
     description: "Lightweight on-device AI framework optimized for ESP32 microcontrollers",
     image: "/framework.png",
     tech: ["C++", "ESP32", "AI/ML", "Edge Computing"],
-    github: "https://github.com/Jitimay/ubwonko-edge",
+    github: "https://github.com/Jitimay/ubwonko_Edge_AI",
     demo: null
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     description: "8-player buzzer system with lockout logic for national quiz competitions",
     image: "/buzzers.jpeg",
     tech: ["Arduino", "C++", "Electronics", "Hardware"],
-    github: "https://github.com/Jitimay/quiz-buzzer",
+    github: "https://github.com/Jitimay/GH_Buzzers",
     demo: null
   }
 ];
