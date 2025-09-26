@@ -686,7 +686,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
-              © 2024 Jitimay Josué. All rights reserved.
+              © 2025 Jitimay Josué. All rights reserved.
             </p>
           </div>
         </footer>
