@@ -65,7 +65,75 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     achievements: ["Used in national competitions", "Génies en Herbe Burundi official system", "5+ years of reliable operation"]
                 };
 
-            default:
+            case 5: // Regulus
+                return {
+                    problem: "Applied AI research for African markets requires systems that work in low-connectivity, low-resource environments.",
+                    solution: [
+                        "Research system covering positioning, architecture, and live deployment",
+                        "Designed for offline-first operation in constrained environments",
+                        "Poster accepted to Research in Africa Days, Deep Learning Indaba 2026 (Lagos)"
+                    ],
+                    impact: "Advances applied AI research visibility from Burundi on the continental stage.",
+                    technical: ["Python", "AI/ML", "Edge Computing", "Research Methodology"],
+                    achievements: ["Research in Africa Days poster — Deep Learning Indaba 2026", "Live deployment demonstrated"]
+                };
+
+            case 6: // VeryTontine
+                return {
+                    problem: "Traditional African tontine/ikirimba rotating-savings groups rely on trust and manual record-keeping, making them vulnerable to disputes and fraud.",
+                    solution: [
+                        "Deployed Move smart contracts on the Sui blockchain for transparent fund management",
+                        "Flutter mobile app for group members to contribute and track savings",
+                        "Firebase backend for notifications and off-chain metadata",
+                        "zkLogin for frictionless onboarding without seed phrases",
+                        "Submitted to Sui Overflow 2026 (DeFi & Payments track)"
+                    ],
+                    impact: "Brings financial transparency and programmable trust to informal savings groups across Africa, without requiring participants to understand blockchain.",
+                    technical: ["Move", "Sui Blockchain", "Flutter", "Firebase", "zkLogin"],
+                    achievements: ["Accepted into the Sui Founder Program", "Submitted to Sui Overflow 2026"]
+                };
+
+            case 7: // NodusAI
+                return {
+                    problem: "LLM access in low-connectivity regions is limited to smartphone users with data plans, excluding the majority who rely on basic SMS.",
+                    solution: [
+                        "SMS gateway that routes messages to an LLM backend",
+                        "Supports multilingual prompts: Kirundi, French, English, Swahili",
+                        "Per-number conversation history for contextual multi-turn interactions",
+                        "Designed for feature phones with no internet requirement on the user side"
+                    ],
+                    impact: "Extends LLM access to users without smartphones or data connectivity across East and Central Africa.",
+                    technical: ["Node.js", "LLM API", "SMS Gateway", "Multilingual NLP"],
+                    achievements: ["Multilingual support across 4 languages", "Stateful per-number conversation history"]
+                };
+
+            case 8: // MajiDawa
+                return {
+                    problem: "Rural health facilities in Burundi lack triage support tools, and most patients communicate in Kirundi rather than French or English.",
+                    solution: [
+                        "Fine-tuned Gemma model using LoRA and Unsloth for medical triage in Kirundi/French",
+                        "Delivered entirely over SMS — no smartphone or internet required",
+                        "Symptom-based triage with referral recommendations",
+                        "Submitted to the Kaggle × Google DeepMind Gemma Hackathon"
+                    ],
+                    impact: "Provides basic medical triage guidance in local languages to underserved communities via the infrastructure they already have.",
+                    technical: ["Gemma", "LoRA", "Unsloth", "SMS", "Python", "Fine-tuning"],
+                    achievements: ["Submitted to Kaggle × Google DeepMind Gemma Hackathon", "Kirundi-language medical NLP"]
+                };
+
+            case 9: // MajiSafe
+                return {
+                    problem: "REGIDESO's water and electricity distribution lacks automated dispensing and tamper-evident transaction records, enabling fraud and manual errors.",
+                    solution: [
+                        "ESP32/SIM800L hardware for remote metering and dispensing control",
+                        "Node.js/Express backend with SHA-256 hash-chained ledger for tamper-evident records",
+                        "Flutter mobile app for customers to purchase and monitor usage",
+                        "React dashboard for REGIDESO operators"
+                    ],
+                    impact: "Reduces fraud in utility distribution and provides an auditable transaction trail for Burundi's national water and electricity utility.",
+                    technical: ["ESP32", "SIM800L", "Node.js", "Express", "Flutter", "React", "SHA-256"],
+                    achievements: ["Built during REGIDESO internship", "Hash-chained ledger for tamper-evident records"]
+                };
                 return {
                     problem: "Project details not available.",
                     solution: [],

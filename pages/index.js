@@ -24,8 +24,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jitimay Josué - Embedded Systems & AI Enthusiast</title>
-        <meta name="description" content="Full-stack developer specializing in embedded systems, IoT, and AI solutions" />
+        <title>Jitimay Josué — Applied AI & Embedded Systems</title>
+        <meta name="description" content="Computer Science graduate (BIU, 2026) building applied AI and offline-first systems for African markets. Embedded systems, edge AI, blockchain, and research." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -89,7 +89,7 @@ export default function Home() {
                   className="inline-flex items-center px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium"
                 >
                   <div className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></div>
-                  DEVONE HACK 2025 PARTICIPANT
+                  DEEP LEARNING INDABA 2026 — LAGOS
                 </motion.div>
 
                 {/* Main Heading */}
@@ -103,14 +103,14 @@ export default function Home() {
                     Hi, I'm an
                     <br />
                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
-                      embedded
+                      applied AI
                     </span>
                     <br />
                     <span className="text-gray-700 dark:text-gray-300">
-                      systems
+                      researcher &
                     </span>
                     <br />
-                    engineer
+                    builder
                     <span className="text-blue-600">©</span>
                   </h1>
                 </motion.div>
@@ -122,8 +122,8 @@ export default function Home() {
                   transition={{ delay: 0.4 }}
                   className="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed"
                 >
-                  Founder of Spatium Lapis, building Burundi's first smart vending machines. 
-                  I specialize in mind-controlled robotics, embedded AI systems, and have won multiple national competitions.
+                  Graduating July 2026 with a B.Sc. in Computer Science from Bujumbura International University. 
+                  I build applied AI systems and offline-first infrastructure for African markets — from SMS-based medical triage to blockchain savings platforms and edge AI on microcontrollers.
                 </motion.p>
 
                 {/* CTA Button */}
@@ -138,7 +138,7 @@ export default function Home() {
                     }}
                     className="px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-2xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
-                    Let's Build Together
+                    Research collaboration & select projects
                   </button>
                 </motion.div>
               </div>
@@ -221,22 +221,9 @@ export default function Home() {
                         <span className="text-white text-xl">🤖</span>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900 dark:text-white text-sm">BCI EXPERT</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">OpenBCI • ESP32</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm">APPLIED AI RESEARCH</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Edge · Offline-first · Africa</p>
                       </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Floating Rate Card */}
-                  <motion.div 
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1 }}
-                    className="absolute -right-4 sm:-right-16 bottom-32 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl z-30 border border-gray-100 dark:border-gray-700"
-                  >
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-gray-900 dark:text-white">$50 - $100</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">per hour</p>
                     </div>
                   </motion.div>
 
@@ -247,20 +234,20 @@ export default function Home() {
                     transition={{ delay: 1.2 }}
                     className="absolute -bottom-20 left-4 right-4 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-4 shadow-xl z-30"
                   >
-                    <p className="text-white text-sm font-medium mb-2">National Competition Wins</p>
+                    <p className="text-white text-sm font-medium mb-2">Deep Learning Indaba</p>
                     <div className="flex items-center justify-between">
                       <div className="flex space-x-2">
                         <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs">🏆</span>
+                          <span className="text-white text-xs font-bold">NG</span>
                         </div>
                         <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs">🥈</span>
+                          <span className="text-white text-xs font-bold">RW</span>
                         </div>
                         <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs">🧠</span>
+                          <span className="text-white text-xs font-bold">GH</span>
                         </div>
                       </div>
-                      <span className="text-white/80 text-xs">2024-2025</span>
+                      <span className="text-white/80 text-xs">2023 · 2025 · 2026</span>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -275,18 +262,20 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">About Me</h2>
             <div className="text-lg text-gray-600 dark:text-gray-300 space-y-4">
               <p>
-                I'm the founder of <strong className="text-gray-900 dark:text-white">Spatium Lapis</strong>, where I'm building 
-                Burundi's first smart vending machine for medication and essentials. My passion lies in creating 
-                innovative solutions that combine embedded systems, AI, and brain-computer interfaces.
+                I'm graduating in July 2026 with a B.Sc. in Computer Science from{' '}
+                <strong className="text-gray-900 dark:text-white">Bujumbura International University (BIU)</strong>.
+                My work sits at the intersection of applied AI research, embedded systems, and offline-first infrastructure for African markets.
               </p>
               <p>
-                Currently pursuing my Bachelor of Science and Technology, I've developed groundbreaking projects 
-                including mind-controlled robots using OpenBCI and ESP32, and UbwonkoEdge AI - a lightweight 
-                on-device AI framework for microcontrollers.
+                I'm the founder of <strong className="text-gray-900 dark:text-white">Spatium Lapis</strong>, where I built
+                Burundi's first smart vending machine. Recent projects include an SMS-based medical triage system in Kirundi/French
+                (fine-tuned Gemma), a blockchain rotating-savings platform on Sui, and an SMS-to-LLM multilingual gateway.
+                I'm currently interning at REGIDESO building MajiSafe, a smart water and electricity dispensing platform.
               </p>
               <p>
-                As a national competition winner and Indaba Deep Learning conference attendee, I'm committed to 
-                pushing the boundaries of what's possible with embedded AI and robotics in Africa.
+                I've presented research at Deep Learning Indaba in Accra (2023), Kigali (2025), and Lagos (2026),
+                where my Regulus poster was accepted to Research in Africa Days. I'm interested in research collaborations
+                and select engineering projects focused on practical impact in low-resource environments.
               </p>
             </div>
           </div>
@@ -351,28 +340,50 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Experience</h2>
             <div className="space-y-8">
+              <div className="border-l-4 border-blue-600 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Software Engineering Intern</h3>
+                <p className="text-blue-600 dark:text-blue-400 mb-2">REGIDESO (National Water & Electricity Utility) · 2026–Present</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Building MajiSafe, a smart water and electricity dispensing platform. Stack: ESP32/SIM800L hardware,
+                  Node.js/Express backend, Flutter mobile app, React dashboard, SHA-256 hash-chained ledger for tamper-evident transaction records.
+                </p>
+              </div>
               <div className="border-l-4 border-purple-600 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Founder & Lead Engineer</h3>
-                <p className="text-purple-600 dark:text-purple-400 mb-2">Spatium Lapis • Jan 2024 - Present</p>
+                <p className="text-purple-600 dark:text-purple-400 mb-2">Spatium Lapis · Jan 2024–Present</p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Designed Ikimashini, Burundi's first smart vending machine for medication and essentials. 
-                  Built UbwonkoEdge AI, a lightweight on-device AI framework for ESP32 microcontrollers.
+                  Designed Ikimashini, Burundi's first smart vending machine for medication and essentials.
+                  Built UbwonkoEdge AI, a lightweight on-device AI inference framework for ESP32 microcontrollers.
+                </p>
+              </div>
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Physics Teacher</h3>
+                <p className="text-yellow-600 dark:text-yellow-400 mb-2">2024–Present</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Teaching secondary-level physics alongside engineering work.
                 </p>
               </div>
               <div className="border-l-4 border-blue-600 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Software Developer</h3>
-                <p className="text-blue-600 dark:text-blue-400 mb-2">Uhuru Chat Inc • Aug 2024 - Present</p>
+                <p className="text-blue-600 dark:text-blue-400 mb-2">Uhuru Chat Inc · Aug 2024–Present</p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Contributing to backend/frontend development of an international chat application 
-                  using Flutter and Firebase, serving users globally.
+                  Contributing to backend and frontend development of an international chat application
+                  using Flutter and Firebase.
                 </p>
               </div>
               <div className="border-l-4 border-green-600 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Staff Member</h3>
-                <p className="text-green-600 dark:text-green-400 mb-2">Génies en Herbe Burundi • Feb 2020 - Present</p>
+                <p className="text-green-600 dark:text-green-400 mb-2">Génies en Herbe Burundi · Feb 2020–Present</p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Engineered 8-player Arduino buzzer system with lockout logic, enhancing national competitions. 
+                  Engineered an 8-player Arduino buzzer system with lockout logic for national competitions.
                   Authored quiz questions and supported event logistics.
+                </p>
+              </div>
+              <div className="border-l-4 border-gray-400 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Webmaster</h3>
+                <p className="text-gray-500 dark:text-gray-400 mb-2">Buja Sans Tabou</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Managed and maintained the organization's web presence.
                 </p>
               </div>
             </div>
@@ -391,12 +402,11 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Awards & Achievements</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Recognition for innovation, technical excellence, and leadership in technology competitions across Burundi.
+                Recognition for technical work and competition results in Burundi.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* National Pitch Competition Winner */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -409,18 +419,17 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">🏆</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">1st Place Winner</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">1st Place</h3>
                   <p className="text-yellow-700 dark:text-yellow-300 font-semibold mb-2">National Pitch Competition</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Burundi • 2024</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Burundi · 2024</p>
                   <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-lg p-3">
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Won the national startup pitch competition with innovative technology solutions
+                      National startup pitch competition, technology track.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Arduino Day Competition */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -435,16 +444,15 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">2nd Place</h3>
                   <p className="text-blue-700 dark:text-blue-300 font-semibold mb-2">Arduino Day Competition</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Burundi • 2025</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Burundi · 2025</p>
                   <div className="bg-blue-100 dark:bg-blue-900/30 rounded-lg p-3">
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Recognized for outstanding embedded systems and Arduino project innovation
+                      Embedded systems and Arduino project competition.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* National Quiz Competition */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -459,17 +467,16 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Champion</h3>
                   <p className="text-green-700 dark:text-green-300 font-semibold mb-2">National Quiz Competition</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Burundi • 2020</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Burundi · 2020</p>
                   <div className="bg-green-100 dark:bg-green-900/30 rounded-lg p-3">
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Demonstrated exceptional knowledge and quick thinking in national academic competition
+                      Génies en Herbe national academic competition.
                     </p>
                   </div>
                 </div>
               </motion.div>
             </div>
 
-            {/* Achievement Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -477,54 +484,51 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-8 text-white text-center"
             >
-              <h3 className="text-2xl font-bold mb-4">Competition Track Record</h3>
+              <h3 className="text-2xl font-bold mb-4">Other Recognition</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <div className="text-3xl font-black">3</div>
-                  <div className="text-purple-100">Major Awards</div>
+                  <div className="text-purple-100">Competition Awards</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-black">5</div>
-                  <div className="text-purple-100">Years Competing</div>
+                  <div className="text-3xl font-black">3×</div>
+                  <div className="text-purple-100">Deep Learning Indaba</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-black">100%</div>
-                  <div className="text-purple-100">Podium Finish Rate</div>
+                  <div className="text-3xl font-black">2</div>
+                  <div className="text-purple-100">Hackathon Submissions (2026)</div>
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* DevOne Hack 2025 Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
-          <div className="max-w-4xl mx-auto text-center text-white">
+        {/* Conferences & Research Section */}
+        <section id="conferences" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+          <div className="max-w-4xl mx-auto text-white">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4">Built for DevOne Hack 2025</h2>
-              <p className="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
-                This portfolio represents the intersection of embedded systems innovation and modern web development. 
-                From mind-controlled robots to smart vending machines, showcasing how African tech talent is shaping the future.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <h2 className="text-3xl font-bold mb-2 text-center">Conferences & Research</h2>
+              <p className="text-purple-100 text-center mb-10">Deep Learning Indaba attendee and poster presenter.</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                  <div className="text-3xl mb-2">🧠</div>
-                  <div className="font-semibold">BCI Innovation</div>
-                  <div className="text-sm text-purple-100">Brain-Computer Interfaces</div>
+                  <div className="text-sm font-semibold text-purple-200 mb-1">2026 · Lagos, Nigeria</div>
+                  <div className="font-bold text-lg mb-1">Deep Learning Indaba</div>
+                  <div className="text-sm text-purple-100">Research in Africa Days — poster presenter (Regulus)</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                  <div className="text-3xl mb-2">🏆</div>
-                  <div className="font-semibold">Competition Winner</div>
-                  <div className="text-sm text-purple-100">National Recognition</div>
+                  <div className="text-sm font-semibold text-purple-200 mb-1">2025 · Kigali, Rwanda</div>
+                  <div className="font-bold text-lg mb-1">Deep Learning Indaba</div>
+                  <div className="text-sm text-purple-100">Attendee</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                  <div className="text-3xl mb-2">🚀</div>
-                  <div className="font-semibold">Future-Ready</div>
-                  <div className="text-sm text-purple-100">Next.js 14 & Modern Stack</div>
+                  <div className="text-sm font-semibold text-purple-200 mb-1">2023 · Accra, Ghana</div>
+                  <div className="font-bold text-lg mb-1">Deep Learning Indaba</div>
+                  <div className="text-sm text-purple-100">Attendee</div>
                 </div>
               </div>
             </motion.div>
@@ -542,7 +546,7 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">Let's Connect</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12">
-                Ready to build something amazing together? Let's discuss your next project!
+                Available for research collaboration and select engineering projects.
               </p>
             </motion.div>
             
@@ -686,7 +690,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
-              © 2025 Jitimay Josué. All rights reserved.
+              © 2026 Jitimay Josué. All rights reserved.
             </p>
           </div>
         </footer>

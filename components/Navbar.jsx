@@ -9,6 +9,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Research', href: '#conferences' },
     { name: 'Awards', href: '#achievements' },
     { name: 'Contact', href: '#contact' }
   ];
@@ -57,13 +58,13 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
             <motion.button
               onClick={() => {
-                window.open('mailto:jitimayjosh1@gmail.com?subject=Hiring Inquiry - Jitimay Josué&body=Hi Jitimay,%0D%0A%0D%0AI am interested in discussing potential opportunities with you.%0D%0A%0D%0ABest regards', '_blank');
+                window.open('mailto:jitimayjosh1@gmail.com?subject=Collaboration Inquiry - Jitimay Josué&body=Hi Jitimay,%0D%0A%0D%0AI am interested in discussing a potential collaboration with you.%0D%0A%0D%0ABest regards', '_blank');
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
             >
-              Hire Me
+              Get in Touch
             </motion.button>
           </div>
 
@@ -106,12 +107,12 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             ))}
             <button 
               onClick={() => {
-                window.open('mailto:jitimayjosh1@gmail.com?subject=Hiring Inquiry - Jitimay Josué&body=Hi Jitimay,%0D%0A%0D%0AI am interested in discussing potential opportunities with you.%0D%0A%0D%0ABest regards', '_blank');
+                window.open('mailto:jitimayjosh1@gmail.com?subject=Collaboration Inquiry - Jitimay Josué&body=Hi Jitimay,%0D%0A%0D%0AI am interested in discussing a potential collaboration with you.%0D%0A%0D%0ABest regards', '_blank');
                 setIsOpen(false);
               }}
               className="w-full mt-4 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-semibold"
             >
-              Hire Me
+              Get in Touch
             </button>
           </motion.div>
         )}
