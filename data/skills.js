@@ -3,26 +3,40 @@ export const skills = {
     { name: "C/C++", icon: "⚡" },
     { name: "Python", icon: "🐍" },
     { name: "Dart", icon: "🎯" },
-    { name: "JavaScript", icon: "📜" }
+    { name: "JavaScript", icon: "📜" },
+    { name: "Move", icon: "🔷" }
   ],
   frameworks: [
     { name: "Flutter", icon: "📱" },
+    { name: "React", icon: "⚛️" },
+    { name: "Node.js", icon: "🟢" },
     { name: "Firebase", icon: "🔥" },
-    { name: "Arduino IDE", icon: "🤖" },
-    { name: "ESP32", icon: "📡" }
+    { name: "Express", icon: "🚂" }
   ],
-  specialties: [
-    { name: "Brain-Computer Interface", icon: "🧠" },
-    { name: "Embedded Systems", icon: "🔌" },
-    { name: "Robotics", icon: "🤖" },
+  ai: [
+    { name: "Gemma / LoRA", icon: "🧬" },
+    { name: "Unsloth", icon: "🦥" },
+    { name: "Edge AI", icon: "⚡" },
+    { name: "Fine-tuning", icon: "🎛️" },
+    { name: "Multilingual NLP", icon: "🌍" },
+    { name: "Brain-Computer Interface", icon: "🧠" }
+  ],
+  hardware: [
+    { name: "ESP32", icon: "📡" },
+    { name: "Arduino", icon: "🔧" },
+    { name: "SIM800L", icon: "📶" },
+    { name: "OpenBCI", icon: "🧠" },
     { name: "IoT", icon: "🌐" },
-    { name: "AI/ML", icon: "🤖" },
-    { name: "Edge Computing", icon: "⚡" }
+    { name: "Embedded Systems", icon: "🔌" }
+  ],
+  blockchain: [
+    { name: "Sui Blockchain", icon: "🔷" },
+    { name: "zkLogin", icon: "🔐" },
+    { name: "SHA-256 Ledger", icon: "🔗" }
   ],
   tools: [
-    { name: "OpenBCI", icon: "🧠" },
-    { name: "Arduino", icon: "🔧" },
-    { name: "ESP32", icon: "📡" },
-    { name: "Git", icon: "🌿" }
+    { name: "Git", icon: "🌿" },
+    { name: "Arduino IDE", icon: "🤖" },
+    { name: "SMS Gateway", icon: "💬" }
   ]
 };

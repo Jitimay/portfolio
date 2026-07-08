@@ -9,7 +9,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Research', href: '#conferences' },
+    { name: 'Research', href: '#research' },
     { name: 'Awards', href: '#achievements' },
     { name: 'Contact', href: '#contact' }
   ];

@@ -40,24 +40,16 @@ export default function ProjectCarousel({ projects }) {
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
-  // Show 3 projects at once on desktop, 1 on mobile
-  const getVisibleProjects = () => {
-    const visibleCount = window.innerWidth >= 1024 ? 3 : 1;
-    const visible = [];
-    
-    for (let i = 0; i < visibleCount; i++) {
-      const index = (currentIndex + i) % projects.length;
-      visible.push(projects[index]);
-    }
-    
-    return visible;
-  };
-
   const [visibleProjects, setVisibleProjects] = useState([projects[0]]);
 
   useEffect(() => {
     const updateVisibleProjects = () => {
-      setVisibleProjects(getVisibleProjects());
+      const visibleCount = window.innerWidth >= 1024 ? 3 : 1;
+      const visible = [];
+      for (let i = 0; i < visibleCount; i++) {
+        visible.push(projects[(currentIndex + i) % projects.length]);
+      }
+      setVisibleProjects(visible);
     };
 
     updateVisibleProjects();

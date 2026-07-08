@@ -134,6 +134,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     technical: ["ESP32", "SIM800L", "Node.js", "Express", "Flutter", "React", "SHA-256"],
                     achievements: ["Built during REGIDESO internship", "Hash-chained ledger for tamper-evident records"]
                 };
+            default:
                 return {
                     problem: "Project details not available.",
                     solution: [],

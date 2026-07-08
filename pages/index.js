@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
 import ProjectCarousel from '../components/ProjectCarousel';
@@ -12,14 +13,37 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    const stored = localStorage.getItem('darkMode');
+    if (stored === 'true') setDarkMode(true);
+  }, []);
+
+  useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
+    localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formStatus, setFormStatus] = useState(null); // 'sending' | 'success' | 'error'
+
+  const handleSend = () => {
+    if (!formData.name || !formData.email || !formData.message) return;
+    setFormStatus('sending');
+    emailjs.send(
+      'YOUR_SERVICE_ID',
+      'YOUR_TEMPLATE_ID',
+      { from_name: formData.name, from_email: formData.email, message: formData.message },
+      'YOUR_PUBLIC_KEY'
+    ).then(() => {
+      setFormStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    }).catch(() => setFormStatus('error'));
+  };
 
   return (
     <>
@@ -535,6 +559,106 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Research Section */}
+        <section id="research" className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Research</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Peer-reviewed and accepted research contributions.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden shadow-lg"
+            >
+              {/* Header bar */}
+              <div className="bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 flex items-center gap-2">
+                <span className="text-white/80 text-xs font-semibold uppercase tracking-widest">Accepted Poster</span>
+                <span className="ml-auto text-white/70 text-xs">Research in Africa Days · Deep Learning Indaba 2026</span>
+              </div>
+
+              <div className="p-6 sm:p-8 bg-white dark:bg-gray-800">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                  {/* Left: text content */}
+                  <div className="flex-1 space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Regulus</h3>
+                      <p className="text-sm text-purple-600 dark:text-purple-400 font-medium mt-1">
+                        Deep Learning Indaba 2026 · Lagos, Nigeria · August 2026
+                      </p>
+                    </div>
+
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      An AI-assisted policy simulation platform combining a hybrid LLM + calibrated simulation engine architecture.
+                      Uses a confidence coefficient to encode data-availability uncertainty, applied to the Nigeria 2023 fuel subsidy removal as a primary case study.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {["Flutter Web", "BLoC", "Supabase Edge Functions", "Groq API", "LLM", "Policy Simulation"].map((tag) => (
+                        <span key={tag} className="px-3 py-1 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/50 dark:to-blue-900/50 text-purple-800 dark:text-purple-200 rounded-full text-xs font-medium border border-purple-200 dark:border-purple-700">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Citation */}
+                    <p className="text-xs text-gray-500 dark:text-gray-400 font-mono border-l-2 border-gray-300 dark:border-gray-600 pl-3 leading-relaxed">
+                      Jitimay Josué. <em>Regulus: AI-Assisted Policy Simulation.</em> Research in Africa Days, Deep Learning Indaba 2026.
+                    </p>
+
+                    {/* Action buttons */}
+                    <div className="flex flex-wrap gap-3 pt-2">
+                      <a
+                        href="/research/regulus-poster.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        </svg>
+                        View Poster (PDF)
+                      </a>
+                      <a
+                        href="https://regulus-policy-sim.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold text-sm hover:from-purple-700 hover:to-blue-700 transition-all"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Live Demo
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Right: venue badge */}
+                  <div className="sm:w-40 flex-shrink-0">
+                    <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 rounded-2xl p-4 text-center space-y-2">
+                      <div className="text-3xl">🧠</div>
+                      <p className="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wide">Deep Learning Indaba</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Lagos, Nigeria</p>
+                      <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold">August 2026</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
           <div className="max-w-2xl mx-auto">
@@ -628,11 +752,13 @@ export default function Home() {
               >
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-800">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Quick Message</h3>
-                  <form className="space-y-4">
+                  <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); handleSend(); }}>
                     <div>
                       <input 
                         type="text" 
                         placeholder="Your Name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       />
                     </div>
@@ -640,6 +766,8 @@ export default function Home() {
                       <input 
                         type="email" 
                         placeholder="Your Email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       />
                     </div>
@@ -647,17 +775,19 @@ export default function Home() {
                       <textarea 
                         rows="4" 
                         placeholder="Your Message"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                       ></textarea>
                     </div>
+                    {formStatus === 'success' && <p className="text-green-600 dark:text-green-400 text-sm">Message sent!</p>}
+                    {formStatus === 'error' && <p className="text-red-600 dark:text-red-400 text-sm">Failed to send. Try emailing directly.</p>}
                     <button 
-                      type="button"
-                      onClick={() => {
-                        window.open('mailto:jitimayjosh1@gmail.com?subject=Portfolio Contact&body=Hi Jitimay, I would like to connect with you!', '_blank');
-                      }}
-                      className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      type="submit"
+                      disabled={formStatus === 'sending'}
+                      className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                     >
-                      Send Message
+                      {formStatus === 'sending' ? 'Sending…' : 'Send Message'}
                     </button>
                   </form>
                 </div>
