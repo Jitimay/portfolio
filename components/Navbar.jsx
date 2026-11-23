@@ -1,122 +1,55 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 
-export default function Navbar({ darkMode, toggleDarkMode }) {
-  const [isOpen, setIsOpen] = useState(false);
+const links = [
+  ['Research', '#research'],
+  ['Systems', '#systems'],
+  ['Recognition', '#achievements'],
+  ['Background', '#experience'],
+  ['Contact', '#contact'],
+];
 
-  const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Research', href: '#research' },
-    { name: 'Awards', href: '#achievements' },
-    { name: 'Contact', href: '#contact' }
-  ];
+export default function Navbar() {
+  const [dark, setDark] = useState(false);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    setDark(document.documentElement.classList.contains('dark'));
+  }, []);
+
+  function toggleTheme() {
+    const next = !dark;
+    document.documentElement.classList.toggle('dark', next);
+    setDark(next);
+    try {
+      localStorage.setItem('darkMode', String(next));
+    } catch {
+      // The theme still works for the current page when storage is unavailable.
+    }
+  }
 
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl z-50 border-b border-gray-200/50 dark:border-gray-700/50"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <motion.a 
-            href="#" 
-            whileHover={{ scale: 1.05 }}
-            className="text-xl font-black text-gray-900 dark:text-white"
-          >
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              JITIMAY
-            </span>
-          </motion.a>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
-              </motion.a>
-            ))}
-            
-            <motion.button
-              onClick={toggleDarkMode}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              {darkMode ? '☀️' : '🌙'}
-            </motion.button>
-
-            <motion.button
-              onClick={() => {
-                window.open('mailto:jitimayjosh1@gmail.com?subject=Collaboration Inquiry - Jitimay Josué&body=Hi Jitimay,%0D%0A%0D%0AI am interested in discussing a potential collaboration with you.%0D%0A%0D%0ABest regards', '_blank');
-              }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
-            >
-              Get in Touch
-            </motion.button>
-          </div>
-
-          <div className="md:hidden flex items-center space-x-2">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
-            >
-              {darkMode ? '☀️' : '🌙'}
-            </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-xl text-gray-600 dark:text-gray-300"
-            >
-              <div className="w-6 h-6 flex flex-col justify-center items-center">
-                <span className={`bg-current block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                <span className={`bg-current block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`bg-current block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
-              </div>
-            </button>
-          </div>
-        </div>
-
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden pb-4 space-y-2"
-          >
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-            <button 
-              onClick={() => {
-                window.open('mailto:jitimayjosh1@gmail.com?subject=Collaboration Inquiry - Jitimay Josué&body=Hi Jitimay,%0D%0A%0D%0AI am interested in discussing a potential collaboration with you.%0D%0A%0D%0ABest regards', '_blank');
-                setIsOpen(false);
-              }}
-              className="w-full mt-4 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-semibold"
-            >
-              Get in Touch
-            </button>
-          </motion.div>
-        )}
+    <header className="site-header">
+      <div className="shell header-inner">
+        <a className="wordmark" href="#top">Josué Jitimay</a>
+        <nav aria-label="Main navigation">
+          {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+        </nav>
+        <motion.button
+          className="theme-button"
+          type="button"
+          aria-label="Dark theme"
+          aria-pressed={dark}
+          onClick={toggleTheme}
+          whileTap={reducedMotion ? undefined : { scale: 0.92 }}
+        >
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+            {dark
+              ? <path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />
+              : <path d="M20.5 15A8.5 8.5 0 0 1 9 3.5 8.5 8.5 0 1 0 20.5 15Z" />}
+          </svg>
+        </motion.button>
       </div>
-    </motion.nav>
+    </header>
   );
 }

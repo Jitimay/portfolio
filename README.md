@@ -1,131 +1,24 @@
-# Jitimay Josué - Portfolio Website 🚀
+# Josué Jitimay · Research portfolio
 
-A modern, responsive portfolio website showcasing embedded systems expertise, AI projects, and hackathon achievements. Built with Next.js and TailwindCSS for optimal performance and user experience.
+Academic portfolio for research-based MSc applications. Built with Next.js Pages Router, React, Tailwind CSS, and Framer Motion.
 
-![Portfolio Preview](https://via.placeholder.com/800x400/6366f1/ffffff?text=Portfolio+Preview)
+## Develop and build
 
-## ✨ Features
-
-- 🌙 **Dark/Light Mode Toggle** - Seamless theme switching
-- 📱 **Mobile-First Design** - Responsive across all devices  
-- ⚡ **Smooth Animations** - Powered by Framer Motion
-- 🎯 **SEO Optimized** - Perfect for discoverability
-- 🎨 **Modern UI/UX** - Glass morphism and gradient effects
-- 🔄 **Auto-Playing Carousels** - Interactive project and skills showcase
-- 📊 **Detailed Project Modals** - Comprehensive project explanations
-- 🏆 **Achievement Showcase** - Competition wins and awards
-- 🚀 **Deploy-Ready** - Optimized for Vercel deployment
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14
-- **Styling**: TailwindCSS
-- **Animations**: Framer Motion  
-- **Contact**: EmailJS (ready for integration)
-- **Deployment**: Vercel-optimized
-
-## 🚀 Quick Start
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/Jitimay/portfolio.git
-cd portfolio
-```
-
-2. **Install dependencies**
-```bash
-npm install
-```
-
-3. **Run development server**
-```bash
+```sh
+npm ci
 npm run dev
-```
-
-4. **Open in browser**
-Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🎨 Customization
-
-### Personal Information
-- Update contact details in `pages/index.js`
-- Modify social media links with your profiles
-- Replace profile image in `public/Josh.jpg`
-
-### Projects
-- Edit project data in `data/projects.js`
-- Add project images to `public/` directory
-- Update GitHub repository links
-
-### Skills
-- Modify technical skills in `data/skills.js`
-- Organize by categories (languages, frameworks, specialties, tools)
-
-### Styling
-- Customize colors and themes in `styles/globals.css`
-- Modify component styles in respective files
-
-## 📦 Deployment
-
-### Vercel (Recommended)
-```bash
 npm run build
-vercel --prod
 ```
 
-### Manual Build
-```bash
-npm run build
-npm start
-```
+Open the development URL printed by Next.js. The production build exports HTML, JavaScript, CSS, and assets into `out/`. Publish that directory to the existing static host. For local production preview with Python 3, run `npm start` and open `http://127.0.0.1:3000`.
 
-## 🏗️ Project Structure
+## Content and configuration
 
-```
-portfolio/
-├── components/          # Reusable UI components
-│   ├── Navbar.jsx      # Navigation with theme toggle
-│   ├── ProjectCard.jsx # Individual project cards
-│   ├── ProjectCarousel.jsx # Auto-playing project showcase
-│   ├── SkillsCarousel.jsx  # Interactive skills display
-│   └── ProjectModal.jsx    # Detailed project information
-├── data/               # Content data
-│   ├── projects.js     # Project information
-│   └── skills.js       # Technical skills
-├── pages/              # Next.js pages
-│   └── index.js        # Main portfolio page
-├── public/             # Static assets
-│   └── *.jpg          # Project and profile images
-└── styles/             # Global styles
-    └── globals.css     # TailwindCSS and custom styles
-```
+- `data/profile.js` contains contact links, research interests, awards, experience, and the CV path.
+- `data/projects.js` contains project descriptions and links. Use direct public links when available.
+- `data/skills.js` contains the technical skills list.
+- `public/research/regulus-poster.pdf` is the published poster and `public/media/` contains resized display assets.
+- To publish a CV, add its PDF under `public/` and set `profile.cv` to its root-relative URL.
+- The contact section always offers direct email. To enable the optional EmailJS form, provide `NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`, and `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` before building. The EmailJS template should accept `from_name`, `from_email`, and `message`.
 
-## 🌟 Key Highlights
-
-- **Embedded Systems Focus**: Showcases BCI, IoT, and robotics projects
-- **Competition Winner**: Features national competition achievements
-- **Modern Design**: Glass morphism effects and smooth animations
-- **Performance Optimized**: Fast loading and smooth interactions
-- **Hackathon Ready**: Perfect for showcasing technical skills
-
-## 🤝 Contributing
-
-This is a personal portfolio, but feel free to:
-- Fork for your own portfolio
-- Submit issues for bugs
-- Suggest improvements via pull requests
-
-## 📄 License
-
-MIT License - feel free to use this as a template for your own portfolio!
-
-## 🔗 Connect
-
-- **GitHub**: [Jitimay](https://github.com/Jitimay)
-- **LinkedIn**: [Josué Jitimay](https://www.linkedin.com/in/josué-jitimay-8b4aa923a)
-- **X (Twitter)**: [@SpatiumL44991](https://x.com/SpatiumL44991)
-- **Email**: jitimayjosh1@gmail.com
-
----
-
-⭐ **Star this repo if you found it helpful!**
+The repository currently has no dedicated lint or type-check scripts.

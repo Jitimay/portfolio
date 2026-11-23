@@ -1,83 +1,77 @@
-export const projects = [
+export const regulus = {
+  title: 'Regulus',
+  poster: '/research/regulus-poster.pdf',
+  demo: 'https://regulus-policy-sim.vercel.app',
+  venue: 'Research in Africa Days, Deep Learning Indaba 2026',
+  location: 'Lagos, Nigeria',
+};
+
+export const systems = [
   {
-    id: 5,
-    title: "Regulus",
-    description: "Applied AI research system for offline-first African markets. Research poster accepted to Research in Africa Days, Deep Learning Indaba 2026 (Lagos).",
-    image: "/framework.png",
-    tech: ["AI/ML", "Edge Computing", "Research", "Python"],
-    github: "https://github.com/Jitimay",
-    demo: null
+    id: 'flow-agent',
+    title: 'Flow Agent',
+    category: 'Water management · Competition prototype',
+    description: 'An intelligent water-management prototype that connects sensing, pump actuation, and automated control.',
+    details: 'The project explores ESP32-based sensing, pump control, and SMS connectivity for water management where internet access is limited. It received Third Place in the 2026 Presidential African Youth in AI and Robotics Competition.',
   },
   {
-    id: 6,
-    title: "VeryTontine",
-    description: "Digitizes traditional African tontine/ikirimba rotating-savings groups on the Sui blockchain. Accepted into the Sui Founder Program; submitted to Sui Overflow 2026 (DeFi & Payments track).",
-    image: "/framework.png",
-    tech: ["Move", "Sui Blockchain", "Flutter", "Firebase", "zkLogin"],
-    github: "https://github.com/Jitimay",
-    demo: null
+    id: 'majisafe',
+    title: 'MajiSafe',
+    category: 'Utility infrastructure · Engineering project',
+    description: 'A smart water and electricity dispensing platform developed during my software engineering internship at REGIDESO.',
+    details: 'The project combines ESP32 and SIM800L hardware with a Node.js backend, a Flutter app, and a React dashboard. A SHA-256 hash chain makes changes to transaction records detectable.',
   },
   {
-    id: 7,
-    title: "NodusAI",
-    description: "SMS-to-LLM gateway supporting multilingual prompts in Kirundi, French, English, and Swahili with per-number conversation history.",
-    image: "/framework.png",
-    tech: ["LLM", "SMS Gateway", "Node.js", "Multilingual NLP"],
-    github: "https://github.com/Jitimay",
-    demo: null
+    id: 'ikimashini',
+    title: 'iKimashini',
+    category: 'Embedded automation · Hardware prototype',
+    description: 'A smart vending machine prototype built around microcontrollers, motor control, and automated dispensing.',
+    details: 'The prototype combines an ESP32 controller, stepper and servo motors, a keypad and display, and SMS-based mobile payment verification.',
+    image: { src: '/media/ikimashini.jpg', alt: 'iKimashini smart vending machine prototype', width: 900, height: 675 },
+  },
+];
+
+export const dawa = {
+  id: 'dawa-ai',
+  title: 'Dawa AI',
+  category: 'Low-resource language technology · Research prototype',
+  description: 'An SMS-based medical triage research prototype for Kirundi and French using a fine-tuned Gemma model.',
+  details: 'The project explored whether people using basic phones could submit symptom descriptions in local languages and receive triage guidance over SMS. The model was fine-tuned using LoRA and Unsloth. It is a research prototype without clinical validation.',
+};
+
+export const otherProjects = [
+  {
+    id: 'irt-1',
+    title: 'IRT-1',
+    description: 'Final-year research prototype exploring EEG-based robot control with OpenBCI and ESP32.',
+    details: 'The project explored processing brain signals and translating classified inputs into robot commands.',
   },
   {
-    id: 8,
-    title: "MajiDawa",
-    description: "Offline SMS-based medical triage system in Kirundi/French using a fine-tuned Gemma model (LoRA, Unsloth). Submitted to the Kaggle × Google DeepMind Gemma Hackathon.",
-    image: "/bci.jpg",
-    tech: ["Gemma", "LoRA", "Unsloth", "SMS", "Fine-tuning"],
-    github: "https://github.com/Jitimay",
-    demo: null
+    id: 'ubwonkoedge',
+    title: 'UbwonkoEdge AI',
+    description: 'Lightweight on-device AI inference framework for ESP32 microcontrollers.',
+    links: [{ label: 'Source code', href: 'https://github.com/Jitimay/ubwonko_Edge_AI' }],
   },
   {
-    id: 9,
-    title: "MajiSafe",
-    description: "Smart water and electricity dispensing platform built during REGIDESO internship. Features a SHA-256 hash-chained ledger for tamper-evident transaction records.",
-    image: "/ikimashini.jpg",
-    tech: ["ESP32", "SIM800L", "Node.js", "Flutter", "React"],
-    github: "https://github.com/Jitimay",
-    demo: null
+    id: 'nodus-ai',
+    title: 'Nodus AI',
+    description: 'SMS-to-LLM gateway with per-number conversation history for Kirundi, French, English, and Swahili.',
   },
   {
-    id: 1,
-    title: "Ikimashini Smart Vending Machine",
-    description: "Burundi's first smart vending machine for medication and essentials with IoT integration.",
-    image: "/ikimashini.jpg",
-    tech: ["ESP32", "C++", "IoT", "Firebase"],
-    github: "https://github.com/Jitimay/ikimashini",
-    demo: null
+    id: 'verytontine',
+    title: 'VeryTontine',
+    description: 'A Sui-based engineering project for digitizing rotating savings groups.',
+    details: 'Accepted into the Sui Founder Program and submitted to Sui Overflow 2026.',
   },
   {
-    id: 2,
-    title: "Mind-Controlled Robot (IRT-1)",
-    description: "Robot prototype controlled by brain signals using OpenBCI and ESP32. Final-year university research project.",
-    image: "/bci.jpg",
-    tech: ["OpenBCI", "ESP32", "C++", "BCI"],
-    github: "https://github.com/Jitimay/mind-robot",
-    demo: null
+    id: 'amtips',
+    title: 'amTips',
+    description: 'Engineering project. A description and project link are forthcoming.',
   },
   {
-    id: 3,
-    title: "UbwonkoEdge AI Framework",
-    description: "Lightweight on-device AI framework optimized for ESP32 microcontrollers.",
-    image: "/framework.png",
-    tech: ["C++", "ESP32", "AI/ML", "Edge Computing"],
-    github: "https://github.com/Jitimay/ubwonko_Edge_AI",
-    demo: null
+    id: 'quiz-buzzer',
+    title: 'Arduino Quiz Buzzer',
+    description: 'An eight-player system with first-press lockout and audiovisual feedback for quiz competitions.',
+    links: [{ label: 'Source code', href: 'https://github.com/Jitimay/GH_Buzzers' }],
   },
-  {
-    id: 4,
-    title: "Arduino Buzzer Competition System",
-    description: "8-player buzzer system with lockout logic for national quiz competitions.",
-    image: "/buzzers.jpeg",
-    tech: ["Arduino", "C++", "Electronics", "Hardware"],
-    github: "https://github.com/Jitimay/GH_Buzzers",
-    demo: null
-  }
 ];
