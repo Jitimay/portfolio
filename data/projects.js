@@ -11,7 +11,6 @@ export const systems = [
     id: 'flow-agent',
     links: [
       { label: 'Watch the Flow Agent prototype demo', href: 'https://www.youtube.com/watch?v=c38sVFhLrFU' },
-      { label: 'Watch the FLOW overview', href: 'https://www.youtube.com/watch?v=9x7d88w-fDk' },
     ],
     title: 'Flow Agent',
     category: 'Water management · Competition prototype',
