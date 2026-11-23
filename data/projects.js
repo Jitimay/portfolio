@@ -9,6 +9,10 @@ export const regulus = {
 export const systems = [
   {
     id: 'flow-agent',
+    links: [
+      { label: 'Watch the Flow Agent prototype demo', href: 'https://www.youtube.com/watch?v=c38sVFhLrFU' },
+      { label: 'Watch the FLOW overview', href: 'https://www.youtube.com/watch?v=9x7d88w-fDk' },
+    ],
     title: 'Flow Agent',
     category: 'Water management · Competition prototype',
     description: 'An intelligent water-management prototype that connects sensing, pump actuation, and automated control.',
@@ -24,7 +28,10 @@ export const systems = [
   },
   {
     id: 'ikimashini',
-    links: [{ label: 'Watch the iKimashini Petro prototype', href: 'https://www.youtube.com/watch?v=JJSYmm0JVI0' }],
+    links: [
+      { label: 'Watch the iKimashini vending demo', href: 'https://www.youtube.com/watch?v=jkhw5eVDXKs' },
+      { label: 'Watch the iKimashini Petro prototype', href: 'https://www.youtube.com/watch?v=JJSYmm0JVI0' },
+    ],
     title: 'iKimashini',
     category: 'Embedded automation · Hardware prototype',
     description: 'A smart vending machine prototype built around microcontrollers, motor control, and automated dispensing.',
@@ -63,6 +70,7 @@ export const otherProjects = [
   {
     id: 'verytontine',
     links: [
+      { label: 'Watch the VeryTontine app walkthrough', href: 'https://www.youtube.com/watch?v=K88JbnbC0DA' },
       { label: 'Watch the VeryTontine demo', href: 'https://www.youtube.com/watch?v=WEeX_yeis64' },
       { label: 'Watch the earlier VeryTontine demo', href: 'https://www.youtube.com/watch?v=4hCXdnvHpMg' },
     ],
