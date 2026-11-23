@@ -13,7 +13,11 @@ export default function ProjectCard({ project }) {
           {image && <img {...image} loading="lazy" decoding="async" />}
         </details>
       )}
-      {links?.map(({ href, label }) => <a key={href} href={href}>{label} for {title}</a>)}
+      {links?.length > 0 && (
+        <ul className="project-links">
+          {links.map(({ href, label }) => <li key={href}><a href={href}>{label}</a></li>)}
+        </ul>
+      )}
     </article>
   );
 }

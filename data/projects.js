@@ -16,6 +16,7 @@ export const systems = [
   },
   {
     id: 'majisafe',
+    links: [{ label: 'Watch the MajiSafe demo', href: 'https://www.youtube.com/watch?v=1B3T0LDmfFI' }],
     title: 'MajiSafe',
     category: 'Utility infrastructure · Engineering project',
     description: 'A smart water and electricity dispensing platform developed during my software engineering internship at REGIDESO.',
@@ -23,6 +24,7 @@ export const systems = [
   },
   {
     id: 'ikimashini',
+    links: [{ label: 'Watch the iKimashini Petro prototype', href: 'https://www.youtube.com/watch?v=JJSYmm0JVI0' }],
     title: 'iKimashini',
     category: 'Embedded automation · Hardware prototype',
     description: 'A smart vending machine prototype built around microcontrollers, motor control, and automated dispensing.',
@@ -33,6 +35,7 @@ export const systems = [
 
 export const dawa = {
   id: 'dawa-ai',
+  links: [{ label: 'Watch the Dawa AI demo', href: 'https://www.youtube.com/shorts/d81WxOE7nj4' }],
   title: 'Dawa AI',
   category: 'Low-resource language technology · Research prototype',
   description: 'An SMS-based medical triage research prototype for Kirundi and French using a fine-tuned Gemma model.',
@@ -50,7 +53,7 @@ export const otherProjects = [
     id: 'ubwonkoedge',
     title: 'UbwonkoEdge AI',
     description: 'Lightweight on-device AI inference framework for ESP32 microcontrollers.',
-    links: [{ label: 'Source code', href: 'https://github.com/Jitimay/ubwonko_Edge_AI' }],
+    links: [{ label: 'Source code for UbwonkoEdge AI', href: 'https://github.com/Jitimay/ubwonko_Edge_AI' }],
   },
   {
     id: 'nodus-ai',
@@ -59,6 +62,10 @@ export const otherProjects = [
   },
   {
     id: 'verytontine',
+    links: [
+      { label: 'Watch the VeryTontine demo', href: 'https://www.youtube.com/watch?v=WEeX_yeis64' },
+      { label: 'Watch the earlier VeryTontine demo', href: 'https://www.youtube.com/watch?v=4hCXdnvHpMg' },
+    ],
     title: 'VeryTontine',
     description: 'A Sui-based engineering project for digitizing rotating savings groups.',
     details: 'Accepted into the Sui Founder Program and submitted to Sui Overflow 2026.',
@@ -72,6 +79,10 @@ export const otherProjects = [
     id: 'quiz-buzzer',
     title: 'Arduino Quiz Buzzer',
     description: 'An eight-player system with first-press lockout and audiovisual feedback for quiz competitions.',
-    links: [{ label: 'Source code', href: 'https://github.com/Jitimay/GH_Buzzers' }],
+    links: [
+      { label: 'Source code for Arduino Quiz Buzzer', href: 'https://github.com/Jitimay/GH_Buzzers' },
+      { label: 'Watch the Professional Quiz Buzzers demo', href: 'https://www.youtube.com/shorts/3aSlvvr0IAw' },
+      { label: 'Watch the additional Quiz Buzzers clip', href: 'https://www.youtube.com/shorts/lW_0KlVGgA0' },
+    ],
   },
 ];

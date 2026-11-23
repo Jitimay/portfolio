@@ -72,7 +72,7 @@ summary:hover { text-decoration: underline; text-underline-offset: 0.23em; }
 .button, .text-link, .link-row a { font-weight: 650; }
 .button { display: inline-block; padding: .65rem 1rem; border: 1px solid transparent; border-radius: .3rem; background: var(--button); color: var(--button-text); }
 .button:hover { text-decoration: underline; }
-.text-link, .link-row a:not(.button), .project-card > a, .footer-inner a { text-decoration: underline; }
+.text-link, .link-row a:not(.button), .project-links a, .footer-inner a { text-decoration: underline; }
 .portrait { max-width: 17rem; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1.05; object-fit: cover; border-radius: .25rem; }
 .portrait figcaption { font-size: .875rem; color: var(--muted); margin-top: .6rem; }
@@ -96,7 +96,7 @@ summary:hover { text-decoration: underline; text-underline-offset: 0.23em; }
 .systems-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .project-card { min-width: 0; padding: 1.35rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--surface); }
 .project-card .label { margin: 0 0 .6rem; }
-.project-card > a { display: inline-block; margin-top: .75rem; }
+.project-links { display: grid; gap: .35rem; margin-top: .75rem; }
 .project-details { margin-top: .75rem; }
 .project-details img { height: auto; margin-top: .8rem; border-radius: .2rem; }
 .secondary-research { margin-top: 1rem; }
